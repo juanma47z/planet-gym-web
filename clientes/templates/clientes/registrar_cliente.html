@@ -1,0 +1,55 @@
+{% extends 'clientes/base.html' %}
+{% load form_filters %}
+{% block content %}
+
+<h1>Registrar Cliente</h1>
+
+<form method="post" class="needs-validation" novalidate>
+    {% csrf_token %}
+
+    <div class="mb-3">
+        {{ form.nombre.label_tag }}  <!-- Cambia "field_name" por el campo real del formulario -->
+        {{ form.nombre|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        {{ form.apellido.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.apellido|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        {{ form.dni.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.dni|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        {{ form.fecha_nacimiento.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.fecha_nacimiento|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        {{ form.direccion.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.direccion|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        {{ form.telefono.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.telefono|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        {{ form.ocupacion.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.ocupacion|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        {{ form.fecha_inicio.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.fecha_inicio|add_class:"form-control" }}
+    </div>
+    <div class="mb-3"></div>
+        {{ form.grupo_sanguineo.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.grupo_sanguineo|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
+        {{ form.observaciones.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.observaciones|add_class:"form-control" }}
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+    <a href="{% url 'lista_clientes' %}" class="btn btn-secondary">Salir</a>
+</form>
+{% endblock %}
+
+
