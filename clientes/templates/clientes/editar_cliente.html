@@ -6,6 +6,10 @@
 <form method="post">
     {% csrf_token %}
     <div class="mb-3">
+        {{ form.num_socio.label_tag }}  <!-- Cambia "field_name" por el campo real del formulario -->
+        {{ form.num_socio|add_class:"form-control" }}
+    </div>
+    <div class="mb-3">
         {{ form.nombre.label_tag }}  <!-- Cambia "field_name" por el campo real del formulario -->
         {{ form.nombre|add_class:"form-control" }}
     </div>
@@ -34,7 +38,7 @@
         {{ form.ocupacion|add_class:"form-control" }}
     </div>
     <div class="mb-3">
-        {{ form.fecha_inicio.label_tag }} <!-- Cambia "another_field" por el siguiente campo del formulario -->
+        {{ form.fecha_inicio.label_tag }}
         {{ form.fecha_inicio|add_class:"form-control" }}
     </div>
     <div class="mb-3"></div>

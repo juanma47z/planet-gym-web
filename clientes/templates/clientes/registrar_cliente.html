@@ -6,7 +6,10 @@
 
 <form method="post" class="needs-validation" novalidate>
     {% csrf_token %}
-
+    <div class="mb-3">
+        {{ form.num_socio.label_tag }}  <!-- Cambia "field_name" por el campo real del formulario -->
+        {{ form.num_socio|add_class:"form-control" }}
+    </div>
     <div class="mb-3">
         {{ form.nombre.label_tag }}  <!-- Cambia "field_name" por el campo real del formulario -->
         {{ form.nombre|add_class:"form-control" }}

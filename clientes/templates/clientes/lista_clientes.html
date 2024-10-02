@@ -6,6 +6,7 @@
     <table class="table">
       <thead>
         <tr>
+          <th>N° Socio</th>
           <th>Dni</th>
           <th>Nombre</th>
           <th>Apellido</th>
@@ -15,6 +16,7 @@
       <tbody>
         {% for cliente in clientes %}
         <tr>
+          <td>{{ cliente.num_socio }}</td>
           <td>{{ cliente.dni }}</td>
           <td>{{ cliente.nombre }}</td>
           <td>{{ cliente.apellido }}</td>

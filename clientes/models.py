@@ -13,6 +13,8 @@ class Cliente(models.Model):
     fecha_inicio = models.DateField()
     grupo_sanguineo = models.CharField(max_length=3)
     observaciones = models.TextField(blank=True, null=True)
+    num_socio = models.IntegerField()
+
 
     def __str__(self):
         return f"{self.nombre} {self.apellido}"
